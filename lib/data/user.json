@@ -1,0 +1,30 @@
+[
+    {
+     "createdAt": "2022-09-05T01:54:00.280Z",
+     "name": "Betty Bode",
+     "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/652.jpg",
+     "id": "1",
+     "amount": "210.99",
+     "transactions": [
+        {
+            "transactionType": "payment",
+            "transactionDescription": "withdrawal transaction at Tillman - Lueilwitz using card ending with ***(...3987) for SVC 930.72 in account ***66047146",
+            "transactionAmount": "113.96"        
+        },
+        {
+            "transactionType": "payment",
+            "transactionDescription": "withdrawal transaction at Ward, Feest and Dach using card ending with ***(...9075) for EGP 23.35 in account ***29445301",
+            "transactionAmount": "78.05"
+        },
+        {
+            "transactionType": "deposit",
+            "transactionDescription": "deposit transaction at Heaney Group using card ending with ***(...4578) for EGP 221.61 in account ***01374788",
+            "transactionAmount": "533.08"
+        }
+    ],
+     "card": {
+        "cardNumber": "4539955114724",
+        "cardCVV": "454"
+       }
+    } 
+]
