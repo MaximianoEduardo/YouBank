@@ -9,20 +9,36 @@
         {
             "transactionType": "payment",
             "transactionDescription": "withdrawal transaction at Tillman - Lueilwitz using card ending with ***(...3987) for SVC 930.72 in account ***66047146",
-            "transactionAmount": "113.96"        
+            "transactionAmount": "113.96",
+            "date": "2022-04-21T22:30:36.224Z"        
         },
         {
-            "transactionType": "payment",
-            "transactionDescription": "withdrawal transaction at Ward, Feest and Dach using card ending with ***(...9075) for EGP 23.35 in account ***29445301",
-            "transactionAmount": "78.05"
+            "transactionType": "invoice",
+            "transactionDescription": "withdrawal transaction at Schuppe and Sons using card ending with ***(...8364) for BIF 769.83 in account ***36598146",
+            "transactionAmount": "740.90",
+            "date": "2022-08-18T20:37:06.423Z"
         },
         {
             "transactionType": "deposit",
             "transactionDescription": "deposit transaction at Heaney Group using card ending with ***(...4578) for EGP 221.61 in account ***01374788",
-            "transactionAmount": "533.08"
+            "transactionAmount": "533.08",
+            "date": "2022-04-21T22:30:36.224Z"
+        },
+        {
+            "transactionType": "withdrawal",
+            "transactionDescription": "invoice transaction at Schneider - Barton using card ending with ***(...2293) for BRL 822.59 in account ***51406223",
+            "transactionAmount": "881.70",
+            "date": "2022-04-17T02:52:19.418Z"
+          },
+          
+          {
+            "transactionType": "payment",
+            "transactionDescription": "withdrawal transaction at Ward, Feest and Dach using card ending with ***(...9075) for EGP 23.35 in account ***29445301",
+            "transactionAmount": "78.05",
+            "date": "2022-04-21T22:30:36.224Z"
         }
     ],
-     "card": {
+     "cardData": {
         "cardNumber": "4539955114724",
         "cardCVV": "454"
        }
