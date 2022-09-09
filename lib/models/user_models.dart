@@ -1,41 +1,54 @@
 import 'dart:convert';
 
-List<User> welcomeFromMap(String str) =>
+List<User> userFromMap(String str) =>
     List<User>.from(json.decode(str).map((x) => User.fromMap(x)));
 
-String welcomeToMap(List<User> data) =>
+String userToMap(List<User> data) =>
     json.encode(List<dynamic>.from(data.map((x) => x.toMap())));
 
 class User {
   User({
+    required this.createdAt,
+    required this.name,
+    required this.avatar,
+    required this.id,
     required this.amount,
     required this.transactions,
-    required this.id,
-    required this.card,
+    required this.cardData,
   });
 
-  final String amount;
-  final Transactions transactions;
+  final DateTime createdAt;
+  final String name;
+  final String avatar;
   final String id;
-  final Card card;
+  final String amount;
+  final List<Transaction> transactions;
+  final CardData cardData;
 
   factory User.fromMap(Map<String, dynamic> json) => User(
-        amount: json["amount"],
-        transactions: Transactions.fromMap(json["transactions"]),
+        createdAt: DateTime.parse(json["createdAt"]),
+        name: json["name"],
+        avatar: json["avatar"],
         id: json["id"],
-        card: Card.fromMap(json["card"]),
+        amount: json["amount"],
+        transactions: List<Transaction>.from(
+            json["transactions"].map((x) => Transaction.fromMap(x))),
+        cardData: CardData.fromMap(json["cardData"]),
       );
 
   Map<String, dynamic> toMap() => {
-        "amount": amount,
-        "transactions": transactions.toMap(),
+        "createdAt": createdAt.toIso8601String(),
+        "name": name,
+        "avatar": avatar,
         "id": id,
-        "card": card.toMap(),
+        "amount": amount,
+        "transactions": List<dynamic>.from(transactions.map((x) => x.toMap())),
+        "cardData": cardData.toMap(),
       };
 }
 
-class Card {
-  Card({
+class CardData {
+  CardData({
     required this.cardNumber,
     required this.cardCvv,
   });
@@ -43,7 +56,7 @@ class Card {
   final String cardNumber;
   final String cardCvv;
 
-  factory Card.fromMap(Map<String, dynamic> json) => Card(
+  factory CardData.fromMap(Map<String, dynamic> json) => CardData(
         cardNumber: json["cardNumber"],
         cardCvv: json["cardCVV"],
       );
@@ -54,8 +67,8 @@ class Card {
       };
 }
 
-class Transactions {
-  Transactions({
+class Transaction {
+  Transaction({
     required this.transactionType,
     required this.transactionDescription,
     required this.transactionAmount,
@@ -67,7 +80,7 @@ class Transactions {
   final String transactionAmount;
   final DateTime date;
 
-  factory Transactions.fromMap(Map<String, dynamic> json) => Transactions(
+  factory Transaction.fromMap(Map<String, dynamic> json) => Transaction(
         transactionType: json["transactionType"],
         transactionDescription: json["transactionDescription"],
         transactionAmount: json["transactionAmount"],
