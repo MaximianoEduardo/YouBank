@@ -7,10 +7,10 @@ class ThemeNotifier with ChangeNotifier {
     brightness: Brightness.dark,
     backgroundColor: const Color(0xFF212121),
     dividerColor: Colors.black12,
-    iconTheme: IconThemeData(
+    iconTheme: const IconThemeData(
       color: Colors.black,
     ),
-    textTheme: TextTheme(
+    textTheme: const TextTheme(
       bodyText1: TextStyle(),
       bodyText2: TextStyle(),
     ).apply(
